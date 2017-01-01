@@ -1,0 +1,6 @@
+name "openwebif-client-d"
+description "openwebif interface written in dlang using vibe.d"
+authors "Stephan Dilly, Fabian Wallentowitz"
+copyright "Copyright © 2017, Stephan Dilly"
+license "MIT"
+dependency "vibe-d" version="~>0.7.30"
