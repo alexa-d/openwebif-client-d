@@ -1,4 +1,5 @@
 module openwebif.api;
+import vibe.data.serialization:name;
 
 ///
 struct Movie {
@@ -51,7 +52,12 @@ struct ServicesList
 ///
 struct CurrentServiceInfo
 {
-	string name;
+	@name("name")
+	string _name;
+
+	@name("ref")
+	string _ref;
+
 }
 struct CurrentServiceEPG
 {
