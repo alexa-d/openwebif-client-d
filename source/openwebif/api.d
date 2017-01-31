@@ -59,6 +59,15 @@ struct CurrentServiceInfo
 	string _ref;
 
 }
+
+///
+struct EPGSearchList
+{
+	EPGSearch[] events;
+	bool result;
+}
+
+///
 struct CurrentServiceEPG
 {
 	string sname;
@@ -67,6 +76,17 @@ struct CurrentServiceEPG
 	long now_timestamp;
 	string shortdesc;
 	string longdesc;
+}
+
+///
+struct EPGSearch
+{
+	string begin;
+	string sname;
+	string title;
+	string sref;
+	long begin_timestamp;
+	long duration_sec;
 }
 
 ///
@@ -146,6 +166,9 @@ interface OpenWebifApi {
 	ServicesList getallservices();
 	///
 	CurrentService getcurrent();
+	///
+	@method(HTTPMethod.GET)
+	EPGSearchList epgsearch(string search);
 	///
 	TimerList timerlist();
 	///
