@@ -174,9 +174,10 @@ interface OpenWebifApi {
 	///
 	@method(HTTPMethod.GET)
 	Zap zap(string sRef);
-	/// vol expects a string containing up (increase by 5), down (decrease by 5), set<int> (set100) or mute for toogle mute state
+	///
 	@method(HTTPMethod.GET)
 	EPGSearchList epgservice(string sRef);
+	/// vol expects a string containing up (increase by 5), down (decrease by 5), set<int> (set100) or mute for toogle mute state
 	@method(HTTPMethod.GET)
 	Vol vol(string set);
 	///
