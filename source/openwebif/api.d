@@ -154,6 +154,26 @@ struct PowerState
 }
 
 ///
+struct Remotecontrol
+{
+	string message;
+	bool result;
+}
+
+///
+struct About
+{
+	Info info;
+}
+
+///
+struct Info
+{
+	string brand;
+	string imagedistro;
+}
+
+///
 interface OpenWebifApi {
 
 	import vibe.web.rest:method;
@@ -168,9 +188,15 @@ interface OpenWebifApi {
 	CurrentService getcurrent();
 	///
 	@method(HTTPMethod.GET)
+	About about();
+	///
+	@method(HTTPMethod.GET)
 	EPGSearchList epgsearch(string search);
 	///
 	TimerList timerlist();
+	///
+	@method(HTTPMethod.GET)
+	Remotecontrol remotecontrol(int command);
 	///
 	@method(HTTPMethod.GET)
 	Zap zap(string sRef);
