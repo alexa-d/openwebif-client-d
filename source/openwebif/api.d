@@ -214,9 +214,12 @@ interface OpenWebifApi {
 	///
 	@method(HTTPMethod.GET)
 	RecordNow recordnow();
-	/// powerstate expects 0 for toggle standby, 1 for deep stanbdy, 2 reboot box, 3 restart gui */
+	/// powerstate expects 0 for toggle standby, 1 for deep stanbdy, 2 reboot box, 3 restart gui 
 	@method(HTTPMethod.GET)
 	PowerState powerstate(int newstate);
+	/// 
+	@method(HTTPMethod.GET)
+	PowerState powerstate();
 	///
 	Json message(string text, int type, int timeout);
 }
