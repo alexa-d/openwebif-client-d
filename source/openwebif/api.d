@@ -171,6 +171,7 @@ struct Info
 {
 	string brand;
 	string imagedistro;
+	string model;
 }
 
 ///
