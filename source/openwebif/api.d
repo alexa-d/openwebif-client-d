@@ -1,5 +1,5 @@
 module openwebif.api;
-import vibe.data.serialization:name;
+import vibe.data.serialization : name, optional;
 
 ///
 struct Movie {
@@ -170,6 +170,7 @@ struct About
 struct Info
 {
 	string brand;
+	@optional
 	string imagedistro;
 	string model;
 }
